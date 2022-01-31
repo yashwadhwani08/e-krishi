@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 import json
-from newsapi import NewsApiClient
+# from newsapi import NewsApiClient
 import requests
 import ast
 from django.conf import settings
@@ -23,10 +23,10 @@ def index(request):
 def about(request):
     return render(request,"farmer/about.html")
 
-def news(request):
-    newsapi = NewsApiClient(api_key='310e66acf0d04b249b67b50c07779f7b')
-    top_headlines = newsapi.get_everything(q='farmer'or'crop')
-    return render(request,"farmer/news.html",{"news":top_headlines})
+# def news(request):
+#     newsapi = NewsApiClient(api_key='310e66acf0d04b249b67b50c07779f7b')
+#     top_headlines = newsapi.get_everything(q='farmer'or'crop')
+#     return render(request,"farmer/news.html",{"news":top_headlines})
 
 def tutorials(request):
     return render(request,"farmer/tutorials.html")

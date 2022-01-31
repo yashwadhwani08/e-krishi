@@ -4,7 +4,7 @@ import json
 from .models import Product,Contact,Order,OrderUpdate,Rating
 from math import ceil
 from django.views.decorators.csrf import csrf_exempt
-from newsapi import NewsApiClient
+# from newsapi import NewsApiClient
 from django.db.models import Count
 from django.core.mail import send_mail
 import stripe # new
@@ -70,10 +70,10 @@ def search(request):
 def about(request):
     return render(request,"shop/about.html")
 
-def news(request):
-    newsapi = NewsApiClient(api_key='310e66acf0d04b249b67b50c07779f7b')
-    top_headlines = newsapi.get_everything(q='farmer'or'crop')
-    return render(request,"shop/news.html",{"news":top_headlines})
+# def news(request):
+#     newsapi = NewsApiClient(api_key='310e66acf0d04b249b67b50c07779f7b')
+#     top_headlines = newsapi.get_everything(q='farmer'or'crop')
+#     return render(request,"shop/news.html",{"news":top_headlines})
 
 def contact(request):
     thank=False
