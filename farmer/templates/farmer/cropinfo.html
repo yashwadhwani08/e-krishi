@@ -10,9 +10,10 @@
     }
 </style>
     <h2 class="text-center mb-3">Crop Prediction</h2>
-    <section
-    style="position: absolute; margin-top: 35%; width: 100%; height: 90%; background-color: white; border-radius: 0px 0px 0px 0px;">
+    
     <div class="container" style="padding-top: 3rem;">
+      <form action="{% url 'cropPrediction' %}" method="post">
+        {% csrf_token %}
         <div class="row">
           <div class="input-field col l6">
             <span style="color: #769e5c;font-weight: 600;font-size: 1.25rem;">Nitrogen</span><br><br>
@@ -46,12 +47,12 @@
         </div>
         <button id="predict-btn" type="submit" class="btn btn-large right"
           style="width: 12rem; font-size:1.1rem">Predict</button>
+        </div>
+      </form>
     </div>
-  </section>
-
-  <div class="b_txt" style="border: 3px solid #00b859; border-radius: 10px; padding: 10px; text-align: center;">
-    <p style="font-size: xx-large;">The crop you should grow is <b>{{ prediction }}</b></p>
-  </div>
+  
+{% block Yash %}{% endblock %}
+  
         
 </div>
 {% endblock %}

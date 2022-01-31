@@ -15,7 +15,7 @@ import pickle
 from django.templatetags.static import static
 import joblib
 import os
-
+import numpy as np
 
 from django.contrib import messages
 from django.contrib.auth import login,logout,authenticate
@@ -198,23 +198,27 @@ def crop_prediction(request):
     title = 'e-Krishi: A one stop portal'
 
     if request.method == 'POST':
-        N = int(request.form['nitrogen'])
-        P = int(request.form['phosphorous'])
-        K = int(request.form['potassium'])
-        ph = float(request.form['ph'])
-        rainfall = float(request.form['rainfall'])
-        city = request.form.get("city")
+        print("Hello this is working",request.POST)
+        N = int(request.POST.get('nitrogen'))
+        P = int(request.POST.get('phosphorous'))
+        K = int(request.POST.get('potassium'))        
+        ph = float(request.POST.get('ph'))
+        rainfall = float(request.POST.get('rainfall'))
+        city = request.POST.get("city")
 
         if weather_fetch(city) != None:
             temperature, humidity = weather_fetch(city)
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
-            final_prediction = my_prediction[0]
+            final_prediction = my_prediction[0].capitalize()
             print()
             print("Final Prediction", final_prediction)
-            return render_template('crop-result.html', prediction=final_prediction.capitalize(), title=title)
+            context = {
+                "final_prediction": final_prediction
+            }
+            return render(request, 'farmer/crop-prediction.html', context)
         else:
-            return render_template('try_again.html', title=title)
+            return render('try_again.html', title=title)
 
 
 
