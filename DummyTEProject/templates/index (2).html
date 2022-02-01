@@ -9,14 +9,21 @@
         height: 100rem;
         background-color: #def8fc;
     }
-    
+
+    .logo{
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 50px;
+        height: 50px;
+    }
+
     .img-profile {
         height: auto;
         vertical-align: middle;
         max-width: 14rem;
         max-height: 14rem;
         border: 0.5rem solid rgba(255, 255, 255, 0.4);
-        margin-left: 12%;
+        margin-left: 35%;
         margin-top: 100px;
     }
     
@@ -48,30 +55,40 @@
 <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
 <div class="row">
-    <div class="col-3 farmer">
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mb-2" src="https://cdn.downtoearth.org.in/library/large/2018-04-16/0.41635100_1523870091_136310496_216ff74e2f_z.jpg">
+
+    <!-- <div class = logo>
+        <img class="logo"  src="https://cdn2.vectorstock.com/i/1000x1000/69/51/farmer-stylized-portrait-organic-products-logo-vector-22656951.jpg">
+    </div> -->
+
+    <div class="col-6 farmer">
+        <!-- <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mb-2"  src="https://cdn.downtoearth.org.in/library/large/2018-04-16/0.41635100_1523870091_136310496_216ff74e2f_z.jpg"> -->
             <h3>Crop Disease Prediction</h3>
-            <h3>Crop Information</h3>
-            <h3>Crop News</h3>
+            <h3>Crop Prediction</h3>
+            <h3>Multi-Lingual Support</h3>
             <h3>Tutorials related to farming</h3>
+            <div class="d-flex justify-content-around my-5">
+                <a href="/farmer/" type="button" class="btn btn-outline-success btn-lg"><img src="https://img.icons8.com/emoji/48/000000/man-farmer.png" /> Farmer</a>
+            </div>
         </span>
     </div>
-    <div class="col-6 krishi">
-        <div class="container">
-            <h1><img src="https://img.icons8.com/plasticine/64/000000/sprout.png" /> KRISHI SETU</h1>
+        <!-- <div class="container">
+            <h1><img class="logo" src="/DummyTEProject/static/logo.jpg" height="80px" width="80px" alt=""/>E-KRISHI</h1>
             <p class="text-center"></p>
             <div class="d-flex justify-content-around my-5">
                 <a href="/farmer/" type="button" class="btn btn-outline-success btn-lg"><img src="https://img.icons8.com/emoji/48/000000/man-farmer.png" /> Farmer</a>
                 <a href="/shop/" type="button" class="btn btn-outline-info btn-lg"><img src="https://img.icons8.com/bubbles/50/000000/green-shopping-basket.png" /> Customer</a>
             </div>
         </div>
-    </div>
-    <div class="col-3 customer">
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mb-2" src="https://images.jdmagicbox.com/comp/neyveli/y7/9999p4142.4142.170929190235.c7y7/catalogue/kps-vegetable-wholesale-and-retail-shop-neyveli-general-stores-awy05.jpeg">
+    </div> -->
+    <div class="col-6 customer">
+        <!-- <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mb-2" src="https://images.jdmagicbox.com/comp/neyveli/y7/9999p4142.4142.170929190235.c7y7/catalogue/kps-vegetable-wholesale-and-retail-shop-neyveli-general-stores-awy05.jpeg"> -->
         	<h3>Vegetables</h3>
         	<h3>Fruits</h3>
         	<h3>Pulses</h3>
         	<h3>Grains</h3>
+            <div class="d-flex justify-content-around my-5">
+            <a href="/shop/" type="button" class="btn btn-outline-info btn-lg"><img src="https://img.icons8.com/bubbles/50/000000/green-shopping-basket.png" /> Customer</a>
+            </div>
         </span>
     </div>
 </div>
