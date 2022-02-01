@@ -118,11 +118,7 @@ MESSAGE_TAGS = {
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
-<<<<<<< Updated upstream
-    '/DummyTEProject/static',
-=======
     "/static",
->>>>>>> Stashed changes
 ]
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
