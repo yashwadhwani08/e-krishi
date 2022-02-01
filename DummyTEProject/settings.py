@@ -7,7 +7,6 @@ from django.contrib.messages import constants as messages
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'fnh#_t$l-fh%@g!kyr_sq)@0146$1*zzo6t2fozj4v5o2m)%2-'
 
@@ -119,7 +118,11 @@ MESSAGE_TAGS = {
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
+<<<<<<< Updated upstream
     '/DummyTEProject/static',
+=======
+    "/static",
+>>>>>>> Stashed changes
 ]
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
