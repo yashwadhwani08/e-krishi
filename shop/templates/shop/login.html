@@ -6,10 +6,15 @@
 
     .login {
         padding-top: 80px;
+        width: 50%;
+        height: 100px;
+        float:center;
     }
 </style>
 <div class="container login">
-    <h1>Login form</h1>
+    <br>
+    <h1 style="text-align: center;">LOGIN</h1>
+    <hr><br>
     <form method="post" action="/shop/login">{% csrf_token %}
         <div class="form-group">
             <label for="number">Username</label>
@@ -26,6 +31,6 @@
         </div>
         <button type="submit" class="btn btn-primary mb-2">Submit</button>
     </form>
-    <a href="/farmer/signup">Don't have a account?</a>
+    <a href="/shop/signup">Don't have a account?</a>
 </div>
 {% endblock %}

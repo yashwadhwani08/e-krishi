@@ -6,10 +6,15 @@
     
     .signup {
         padding-top: 80px;
+        width: 50%;
+        height: 100px;
+        float:center;
     }
 </style>
 <div class="container signup">
-    <h1>Sign Up Form</h1>
+    <br>
+    <h1>SIGN UP</h1>
+    <hr><br>
     <form method="POST" action="/shop/signup">{% csrf_token %}
         <div class="form-row">
             <div class="col-md-4 mb-2">
@@ -50,6 +55,6 @@
             </div>
         </div>
         <button class="btn btn-success" type="submit">Submit</button>
-    </form>
+    </form><br>
 </div>
 {% endblock %}
