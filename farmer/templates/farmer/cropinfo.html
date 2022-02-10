@@ -1,13 +1,29 @@
-{% extends 'farmer/basic.html' %} {% block title %}CropInfo{% endblock %} {% block body %}
+{% extends 'farmer/basic.html' %} {% block title %}Crop Recommendation{% endblock %} {% block body %}
 <style>
     .mt-3,
     .my-3 {
-        margin-top: 7rem!important;
+        margin-top: 4rem!important;
     }
     
     .card-img-top {
         height: 200px;
     }
+    
+    .predict{
+      margin-top: 3mm;
+      border: 1inch;
+      border-block-color:#769e5c;
+      border-width: 1.5mm;
+      border-radius: 10px;
+      background-color: #769e5c;
+    }
+
+    .predict:hover{
+      background-color: white;
+      color: black;
+      font-style: bold;
+    }
+
 </style>
     <h2 class="text-center mt-3">Crop Prediction</h2>
     
@@ -24,6 +40,7 @@
             <input type="text" name="potassium" id="potassium" style="border: 3px solid #769e5c;border-radius: 10px">
           </div>
         </div>
+        <br>
         <div class="row">
           <div class="input-field col l6">
             <span style="color: #769e5c;font-weight: 600;font-size: 1.25rem;">Phosphorous</span><br><br>
@@ -35,6 +52,7 @@
             <input type="text" name="ph" id="ph" style="border: 3px solid #769e5c;border-radius: 10px">
           </div>
         </div>
+        <br>
         <div class="row">
           <div class="input-field col l6">
             <span style="color: #769e5c;font-weight: 600;font-size: 1.25rem;">Rainfall (in mm)</span><br><br>
@@ -45,11 +63,13 @@
             <input type="text" name="city" id="city" style="border: 3px solid #769e5c;border-radius: 10px">
           </div>
         </div>
-        <button id="predict-btn" type="submit" class="btn btn-large right"
+        <br>
+        <button id="predict-btn" class="predict" type="submit" class="btn btn-large right"
           style="width: 12rem; font-size:1.1rem">Predict</button>
         </div>
       </form>
     </div>
+    <br><br>
   
 {% block Yash %}{% endblock %}
   

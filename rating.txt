@@ -1,0 +1,36 @@
+      <!-- {% ifequal i.rating 0 %} <p>Rating not applicable</p>{% end ifequal %} 
+      {%ifequal i.rating 1%} 
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      {% endifequal%}
+      {%ifequal i.rating 2%}  
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      {% endifequal%}
+      {%ifequal i.rating 3%} 
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      {% endifequal%}
+      {%ifequal i.rating 4%}
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/empty.png" width="30px" height="30px" alt="">
+      {% endifequal%}
+      {%ifequal i.rating 5%} 
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt="">
+      <img src="/media/filled.png" width="30px" height="30px" alt=""> 
+      {% endifequal%} -->

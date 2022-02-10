@@ -25,44 +25,7 @@
         {%else%}
         <p>{{i.quantity}}</p>
       {%endif%} 
-      {%ifequal i.rating 0%} 
-      <p>Rating not applicable</p>
-      {% endifequal%}
-      {%ifequal i.rating 1%} 
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      {% endifequal%}
-      {%ifequal i.rating 2%}  
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      {% endifequal%}
-      {%ifequal i.rating 3%} 
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      {% endifequal%}
-      {%ifequal i.rating 4%}
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/empty.png" width="30px" height="30px" alt="">
-      {% endifequal%}
-      {%ifequal i.rating 5%} 
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt="">
-      <img src="/media/filled.png" width="30px" height="30px" alt=""> 
-      {% endifequal%}
+      <!-- rating -->
       <p id="productpr{{i.id}}" style="visibility: hidden">{{i.id}}</p>
       {% if i.quantity > 10  %}
       <div class="row">

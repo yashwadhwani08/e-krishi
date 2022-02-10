@@ -18,5 +18,5 @@ urlpatterns = [
     path("addproduct",views.addproduct,name="AddProduct"),
     path("StatewiseProductPrice",views.StatewiseProductPrice,name="StatewiseProductPrice"),
     path("cropDiseasePrediction",views.cropDiseasePrediction,name="cropDiseasePrediction"),
-    path("cropPrediction",views.crop_prediction, name="cropPrediction")
+    path("cropPrediction",views.crop_prediction, name="cropPrediction"),
 ]

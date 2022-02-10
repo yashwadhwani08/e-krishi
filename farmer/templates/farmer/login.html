@@ -1,6 +1,6 @@
 {% extends 'farmer/basic.html' %} {% block title %}Login Form{% endblock %} {% block loginactive %}active{% endblock loginactive %} {% block active %}active{% endblock %} {% block body %}
 <div class="container login" style="margin-top: 8%;">
-    <h1>Login form</h1>
+    <h1>Login</h1>
     <form method="POST" action="/farmer/login">{% csrf_token %}
         <div class="form-group">
             <label for="loginusername">Username</label>

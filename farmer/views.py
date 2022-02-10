@@ -32,14 +32,17 @@ def about(request):
 #     top_headlines = newsapi.get_everything(q='farmer'or'crop')
 #     return render(request,"farmer/news.html",{"news":top_headlines})
 
+# def tutorials(request):
+#     return render(request,"farmer/tutorials.html")
+
 def tutorials(request):
-    return render(request,"farmer/tutorials.html")
+    return render(request,"farmer/404error.html")
 
 def cropinfo(request):
     return render(request,"farmer/cropinfo.html")
 
 def contact(request):
-    return render(request,"farmer/contact.html")
+    return render(request,"farmer/404error.html")
 
 def dashboard(request):
     prod=request.POST.get('commodity')
@@ -219,6 +222,9 @@ def crop_prediction(request):
             return render(request, 'farmer/crop-prediction.html', context)
         else:
             return render('try_again.html', title=title)
+
+def error404(request):
+    return render(request, "farmer/404error.html")
 
 
 

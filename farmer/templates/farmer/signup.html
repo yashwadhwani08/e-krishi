@@ -1,7 +1,7 @@
 {% extends 'farmer/basic.html' %} {% block title %}SignUp Page{% endblock %} {% block signupactive %}active{% endblock signupactive %} {% block active %}active{% endblock %} {% block body %}
 
 <div class="container sign" style="margin-top:8%;">
-    <h1>Sign Up Form</h1>
+    <h1>Sign Up</h1>
     <form action="/farmer/signup" method="POST">{% csrf_token %}
         <div class="form-row">
             <div class="col-md-4 mb-2">
