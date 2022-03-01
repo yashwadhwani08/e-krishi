@@ -32,17 +32,15 @@ def about(request):
 #     top_headlines = newsapi.get_everything(q='farmer'or'crop')
 #     return render(request,"farmer/news.html",{"news":top_headlines})
 
-# def tutorials(request):
-#     return render(request,"farmer/tutorials.html")
-
 def tutorials(request):
-    return render(request,"farmer/404error.html")
+    return render(request,"farmer/tutorials.html")
+
 
 def cropinfo(request):
     return render(request,"farmer/cropinfo.html")
 
 def contact(request):
-    return render(request,"farmer/404error.html")
+    return render(request,"farmer/contact.html")
 
 def dashboard(request):
     prod=request.POST.get('commodity')
@@ -187,7 +185,7 @@ def weather_fetch(city_name):
     else:
         return None
 
-full_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),'farmer/model/model.pkl')
+full_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),'farmer/model/Crop_Recommendation.pkl')
 crop_recommendation_model = joblib.load(full_path)
 
 # def crop_recommendation_model(arr):
@@ -196,6 +194,32 @@ crop_recommendation_model = joblib.load(full_path)
 #     #scaled = joblib.load('encoder.sav')
 #     prediction = model.predict(arr)
 #     return prediction
+
+# def crop_prediction(request):
+#     title = 'e-Krishi: A one stop portal'
+
+#     if request.method == 'POST':
+#         print("Hello this is working",request.POST)
+#         N = int(request.POST.get('nitrogen'))
+#         P = int(request.POST.get('phosphorous'))
+#         K = int(request.POST.get('potassium'))        
+#         ph = float(request.POST.get('ph'))
+#         rainfall = float(request.POST.get('rainfall'))
+#         city = request.POST.get("city")
+
+#         if weather_fetch(city) != None:
+#             temperature, humidity = weather_fetch(city)
+#             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
+#             my_prediction = crop_recommendation_model.predict(data)
+#             final_prediction = my_prediction[0].capitalize()
+#             print()
+#             print("Final Prediction", final_prediction)
+#             context = {
+#                 "final_prediction": final_prediction
+#             }
+#             return render(request, 'farmer/crop-prediction.html', context)
+#         else:
+#             return render('try_again.html', title=title)
 
 def crop_prediction(request):
     title = 'e-Krishi: A one stop portal'
@@ -207,22 +231,21 @@ def crop_prediction(request):
         K = int(request.POST.get('potassium'))        
         ph = float(request.POST.get('ph'))
         rainfall = float(request.POST.get('rainfall'))
-        city = request.POST.get("city")
+        temperature = float(request.POST.get("temperature"))
+        humidity = float(request.POST.get("humidity"))
 
-        if weather_fetch(city) != None:
-            temperature, humidity = weather_fetch(city)
-            data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
-            my_prediction = crop_recommendation_model.predict(data)
-            final_prediction = my_prediction[0].capitalize()
-            print()
-            print("Final Prediction", final_prediction)
-            context = {
-                "final_prediction": final_prediction
-            }
-            return render(request, 'farmer/crop-prediction.html', context)
-        else:
-            return render('try_again.html', title=title)
-
+        # if weather_fetch(city) != None:
+        #     temperature, humidity = weather_fetch(city)
+        data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
+        my_prediction = crop_recommendation_model.predict(data)
+        final_prediction = my_prediction[0].capitalize()
+        print()
+        print("Final Prediction", final_prediction)
+        context = {
+            "final_prediction": final_prediction
+        }
+        return render(request, 'farmer/crop-prediction.html', context)
+    
 def error404(request):
     return render(request, "farmer/404error.html")
 

@@ -159,8 +159,8 @@ def checkout(request):
         print(items_json)
         print(amount)
         
-        send_mail("Krishi setu!", "Thanks for ordering!",
-          "krishi setu <krishisetu0@gmail.com>", [email])
+        send_mail("E-Krishi!", "Thanks for ordering!",
+          "E- Krishi <e.krishi02@gmail.com>", [email])
         #return render(request,"shop/payment.html",{'amount':amount,'items_json':items_json})
         return HttpResponseRedirect('payment')
     return render(request,"shop/checkout.html")

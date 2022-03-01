@@ -110,10 +110,26 @@
     }
 </style>
 
-
+<br><br>
+<div class="container my-4 currentmarket">
+    <div class="card">
+        <div class="card-body">
+            <h5><strong>Get Current Market Price of all products</strong></h5>
+            <hr>
+            <div class="moduletable">
+                <h6>Live Mandi Price</h6>
+                <iframe id="blockrandom-117" src="https://agmarknet.gov.in/agnew/namticker.aspx" width="100%" height="50" scrolling="none" frameborder="1" title="Live Mandi Price" class="wrapper">
+                    No iframes
+                </iframe>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container addprod">
-    <h2 class="text-center">Add Product</h2>
+    <h2 class="text-center">Add Product</h2><hr><br>
+
     <form action="/farmer/addproduct" method="post">{% csrf_token %}
         <div class="row">
             <div class="form-group col-md-6">
@@ -169,6 +185,7 @@
 
         <div style="text-align: center;">
             <button class="btn btn-success" type="submit">Submit</button>
+            <br><br>
         </div>
     </form>
 </div>
